@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VolCircle">
+
+        <attr name="firstColor" format="color|reference" />
+        <attr name="secendColor" format="color|reference" />
+        <attr name="dotCount" format="integer|reference" />
+        <attr name="interval" format="integer|reference" />
+        <attr name="backGroud" format="integer|reference" />
+        <attr name="circleSize" format="dimension|reference" />
+
+    </declare-styleable>
+
+</resources>
