@@ -41,6 +41,7 @@
     <com.work.service.permisson.component.VolCircle
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         app:backGroud="@drawable/ic_launcher"
         app:circleSize="5dp"
         app:dotCount="15"
@@ -49,4 +50,11 @@
         app:secendColor="@color/colorAccent"
 
         />
+
+    <com.work.service.permisson.eventdispatcher.MyButton
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="event" />
 </RelativeLayout>

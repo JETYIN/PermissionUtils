@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.BitmapRegionDecoder;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -183,5 +182,25 @@ public class VolCircle extends View {
                 break;
         }
         return true;
+    }
+
+    /**
+     * 针对设置wrap_cotent的测量操作
+     **/
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
+        int modeWidth = MeasureSpec.getMode(widthMeasureSpec);
+        int sizeHeight = MeasureSpec.getSize(heightMeasureSpec);
+        int modeHeight = MeasureSpec.getMode(heightMeasureSpec);
+
+        int width, height;
+        //此处设置定值，圆形无子空间
+        width = modeWidth == MeasureSpec.EXACTLY ? sizeWidth : 200;
+        height = modeHeight == MeasureSpec.EXACTLY ? sizeHeight : 200;
+
+
+//根据内容绘制组件大小
+        setMeasuredDimension(width, height);
     }
 }
